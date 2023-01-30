@@ -13,9 +13,29 @@
     {% block head %}{% endblock head %}
 </head>
 <body>
-    <h1>
-        This is the code from base.html
-    </h1>
+    <header>
+        <a class = 'site' href = "{% url 'index' %}">
+            <div class = 'site-logo'>
+                <img src = "{% static 'images/' %}">
+            </div>
+            <span class = 'site-name'>
+                H.A.R.T
+            </span>
+        </a>
+        <div class = 'site-navigation'>
+            <ul>
+                <li>
+                    <a href = "">Dashboard</a>
+                </li>
+                <li>
+                    <a href = "">About Us</a>
+                </li>
+                <li>
+                    <a href ="">Contact Us</a>
+                </li>
+            </ul>
+        </div>
+    </header>
     {% block body %}{% endblock body %}
 </body>
 </html>

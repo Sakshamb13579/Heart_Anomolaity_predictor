@@ -1,9 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+a {
+    all: unset;
+    cursor: pointer;
+}
+
 body {
-    background-color: #79ff80;
+    background: linear-gradient(90deg, #000000, #ff3b3b);
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    color: #ffffff;
+}
+
+header {
+    font-family: 'Open Sans', serif;
+    font-size: 3.6vmin;
+
+    display: flex;
+    gap: 5vw;
+    align-items: center;
+    justify-content: space-between;
+}
+
+li:nth-child(2) {
+    margin: 0 5vw;
+}
+
+ul, li {
+    list-style: none;
+    display: flex;
+}
+
+.site {
+    display: flex;
+    padding: 1% 2%;
+}
+
+.site-name {
+    padding-left: 2vw;
+    letter-spacing: 5pt;
+    font-weight: 600;
+}
+
+.site-navigation {
+    width: 100%;
+
+    display: flex;
+    justify-content: flex-end;
+
+    padding: 1% 2%;
+
+    font-size: 3.4vmin;
 }
