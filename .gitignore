@@ -1,0 +1,8 @@
+# Virtual Enviroment
+.venv
+
+# Pycache
+__pycache__
+
+# Project secrets
+.env
