@@ -5,4 +5,4 @@ def index(request):
     return render(request, 'index.html')
 
 def dashboard(request):
-    pass
+    return render(request, 'dashboard.html')

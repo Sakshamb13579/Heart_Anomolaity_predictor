@@ -1,15 +1,14 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block title %}
     Heart Disease Prediction
-{% endblock %}
+{% endblock title %}
 
 {% block head %}
-
-{% endblock %}
+    <link rel = 'stylesheet' type = 'text/css' href = "{% static 'css/index.css' %}">
+{% endblock head %}
 
 {% block body %}
-    <h2>
-        This is the code from index.html
-    </h2>
-{% endblock %}
+    
+{% endblock body %}

@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+    Signup
+{% endblock title %}
+
+{% block head %}
+    <link rel = 'stylesheet' type = 'text/css' href = "{% static 'css/login_signup.css' %}">
+{% endblock head %}
+
+{% block body %}
+    <div class="signup-container-wrapper">
+        <div class="signup-container">
+            <span class="heading-text">
+                Towards a healthier heart
+            </span>
+            <form action="" method="POST" class="signup-form">
+                {% csrf_token %}
+                <div class = 'input-container'>
+                    {{ form.as_div }}
+                </div>
+                <div class = 'btn-container'>
+                    <button type = 'submit' class="btn auth">Signup</button>
+                    <a href = "{% url 'login' %}" class = 'alt-link'>
+                        Already have an account?
+                        Login
+                    </a>
+                </div>
+            </form>
+        </div>
+    </div>
+{% endblock body %}
