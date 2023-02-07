@@ -1,0 +1,47 @@
+.main-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    font-family: 'Nunito', 'Helvetica', sans-serif;
+    padding: 2rem;
+}
+
+.content-title {
+    font-size: 8vmin;
+    font-weight: bold;
+}
+
+.content-subheading {
+    font-size: 4vmin;
+}
+
+.right-container {
+    padding: 2rem;
+    display: grid;
+    place-self: center;
+}
+
+.right-container img {
+    height: 80%;
+    aspect-ratio: 1;
+    margin: auto;
+    mix-blend-mode: overlay;
+}
+
+.sub-container {
+    font-family: 'Nunito', 'Helvetica', sans-serif;
+    padding: 4rem;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+   .main-container {
+        grid-template-columns: 1fr;
+    }
+}
