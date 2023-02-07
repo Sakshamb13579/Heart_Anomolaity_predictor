@@ -1,0 +1,257 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+    Signup
+{% endblock title %}
+
+{% block head %}
+    <link rel = 'stylesheet' type = 'text/css' href = "{% static 'css/additional_data.css' %}">
+{% endblock head %}
+
+{% block body %}
+    <div class="additional-form-wrapper">
+        <div class="additional-form-container">
+            <!-- <span class="heading-text">
+                Towards a healthier heart
+            </span> -->
+            <form action="" method="POST" class="additional-form">
+                {% csrf_token %}
+                <div class = 'input-container'>
+                    <div class = 'form-input'>
+                        <label>Age</label>
+                        <input type="number" name="age" placeholder="in yrs" required>
+                    </div>
+                    <div class = 'form-input'>
+                        <label>Gender</label>
+                        <select name="gender" required>
+                            <option value="" selected disabled hidden>Select</option>
+                            {% for value in options.1 %}
+                                <option value="{{ value }}"> {{ value }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <div class = 'form-input'>
+                        <label>Blood Group</label>
+                        <select name="blood_group" required>
+                            <option value="" selected disabled hidden>Select</option>
+                            {% for value in options.2 %}
+                                <option value="{{ value }}"> {{ value }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <div class = 'form-input'>
+                        <label>Height</label>
+                        <input type="number" name="height" placeholder="in cms" required>
+                    </div>
+                    <div class = 'form-input'>
+                        <label>Weight</label>
+                        <input type="number" name="weight" placeholder="in kgs" required>
+                    </div>
+                    <div class = 'form-input'>
+                        <label>Are you a smoker ?</label>
+                        <select name="smoker_status" required>
+                            <option value="" selected disabled hidden>Select</option>
+                            {% for value in options.4 %}
+                                <option value="{{ value }}"> {{ value }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <div class = 'form-input'>
+                        <label>Heart Rate</label>
+                        <input type="number" name="heart_rate" placeholder="in bpm" required>
+                    </div>
+                    <div class = 'form-input'>
+                        <label>Do you consume alcohol ?</label>
+                        <select name="alcoholic" required>
+                            <option value="" selected disabled hidden>Select</option>
+                            {% for value in options.0 %}
+                                <option value="{{ value }}"> {{ value }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <div class = 'form-input'>
+                        <label>Do you take a balenced diet ?</label>
+                        <select name="balenced_diet" required>
+                            <option value="" selected disabled hidden>Select</option>
+                            {% for value in options.3 %}
+                                <option value="{{ value }}"> {{ value }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <div class = 'form-input'>
+                        <label>How often do you exercise ?</label>
+                        <select name="exercise" required>
+                            <option value="" selected disabled hidden>Select</option>
+                            {% for value in options.3 %}
+                                <option value="{{ value }}"> {{ value }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <div class = 'form-input'>
+                        <label>Do you have any pre existing heart conditions ?</label>
+                        <span class="desc">{ Includes cases of stroke, angina, heart attack, BP }</span>
+                        <select name="pre_heart_cond" required>
+                            <option value="" selected disabled hidden>Select</option>
+                            {% for value in options.0 %}
+                                <option value="{{ value }}"> {{ value }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <div class = 'form-input'>
+                        <label>Do you have a family history of heart ailments?</label>
+                        <select name="family_heart_cond" required>
+                            <option value="" selected disabled hidden>Select</option>
+                            {% for value in options.0 %}
+                                <option value="{{ value }}"> {{ value }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <div class = 'form-input'>
+                        <label>Are you diabetic ?</label>
+                        <select name="diabetic" id="diabetic" required>
+                            <option value="" selected disabled hidden>Select</option>
+                            {% for value in options.0 %}
+                                <option value="{{ value }}"> {{ value }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <div class = 'form-input' id="sugar_level">
+                        <label>Last tested blood sugar level</label>
+                        <input type="number" name="sugar_level" placeholder="in mm/dl">
+                    </div>
+                    <div class = 'form-input'>
+                        <label>Blood Pressure</label>
+                        <input type="number" name="blood_pressure" placeholder="in mm Hg" required>
+                    </div>
+                    <div class = 'form-input'>
+                        <label>Do you have high BP/hypertension ?</label>
+                        <select name="bp_hypert" id="bp_hypert" required>
+                            <option value="" selected disabled hidden>Select</option>
+                            {% for value in options.0 %}
+                                <option value="{{ value }}"> {{ value }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <div class = 'form-input' id="hypert_treatment">
+                        <label>Hypertension treatment ?</label>
+                        <select name="hypert_treatment" required id="hypert_value">
+                            <option value="" selected disabled hidden>Select</option>
+                            {% for value in options.0 %}
+                                <option value="{{ value }}"> {{ value }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <div class = 'form-input' id="asprin_treatment">
+                        <label>Asprin treatment ?</label>
+                        <select name="asprin_treatment" required id="asprin_value">
+                            <option value="" selected disabled hidden>Select</option>
+                            {% for value in options.0 %}
+                                <option value="{{ value }}"> {{ value }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <div class = 'form-input'>
+                        <label>Enter your lipid level</label>
+                        <span class="desc">{Same as total cholestrol}</span>
+                        <input type="number" name="lipid_level" placeholder="in mg/dl" required>
+                    </div>
+                    <div class = 'form-input'>
+                        <label>Are you on Statin ?</label>
+                        <span class="desc">{ For lipid/chol }</span>
+                        <select name="statin" required>
+                            <option value="" selected disabled hidden>Select</option>
+                            {% for value in options.0 %}
+                                <option value="{{ value }}"> {{ value }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <div class = 'form-input'>
+                        <label>Do you have any non cardiac ailments?</label>
+                        <span class="desc">{ Includes events not related to heart directly/indirectly }</span>
+                        <select name="non_cardiac_ailment" id="non_cardiac_ailment" required>
+                            <option value="" selected disabled hidden>Select</option>
+                            {% for value in options.0 %}
+                                <option value="{{ value }}"> {{ value }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <div class = 'form-input' id="treatment">
+                        <label>Are you on any treatment ?</label>
+                        <select name="treatment" required id="treatment_value">
+                            <option value="" selected disabled hidden>Select</option>
+                            {% for value in options.0 %}
+                                <option value="{{ value }}"> {{ value }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <div class = 'form-input'>
+                        <label>Do you suffer from any psychiatric health condition ?</label>
+                        <select name="psychiatric_health_cond" id="psychiatric_health_cond" required>
+                            <option value="" selected disabled hidden>Select</option>
+                            {% for value in options.0 %}
+                                <option value="{{ value }}"> {{ value }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <div class = 'form-input' id="psychiatric_cond_name">
+                        <label>Please specify precisely</label>
+                        <input type="text" name="psychiatric_cond_name">
+                    </div>
+                </div>
+                <span class="note">
+                    <ul class = 'form-ptr'>
+                        <li>Please note that all of these values have to be genuine in order for the best results.</li>
+                        <li>If possible use references from a recent health report.</li>
+                        <li>All the details will be keep private and only used for result prediction.</li>
+                    </ul>
+                </span>
+                <div class = 'btn-container'>
+                    <button type = 'submit' class="btn send">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("diabetic").addEventListener("change", function() {
+          if (this.value === "Yes") {
+            document.getElementById("sugar_level").style.display = "flex";
+          } else {
+            document.getElementById("sugar_level").style.display = "none";
+          }
+        });
+        
+        document.getElementById("bp_hypert").addEventListener("change", function() {
+            if (this.value === "Yes") {
+            document.getElementById("hypert_treatment").style.display = "flex";
+            document.getElementById("hypert_value").value = ""
+            document.getElementById("asprin_treatment").style.display = "flex";
+            document.getElementById("asprin_value").value = ""
+        } else {
+            document.getElementById("hypert_treatment").style.display = "none";
+            document.getElementById("hypert_value").value = "No"
+            document.getElementById("asprin_treatment").style.display = "none";
+            document.getElementById("asprin_value").value = "No"
+        }
+        });
+        
+        document.getElementById("non_cardiac_ailment").addEventListener("change", function() {
+          if (this.value === "Yes") {
+            document.getElementById("treatment").style.display = "flex";
+            document.getElementById("treatment_value").value = ""
+        } else {
+            document.getElementById("treatment").style.display = "none";
+            document.getElementById("treatment_value").value = "No"
+          }
+        });
+
+        document.getElementById("psychiatric_health_cond").addEventListener("change", function() {
+          if (this.value === "Yes") {
+            document.getElementById("psychiatric_cond_name").style.display = "flex";
+          } else {
+            document.getElementById("psychiatric_cond_name").style.display = "none";
+          }
+        });
+        </script>
+{% endblock body %}
