@@ -16,7 +16,7 @@
 
 .heading-text {
     text-align: center;
-    font-size: 2.5rem;
+    font-size: 4vmin;
 }
 
 .signup-form .input-container {
@@ -28,7 +28,7 @@
 
     margin: 2rem 0;
 
-    font-size: 2rem;
+    font-size: 2.7vmin;
 }
 
 .signup-form > div {
@@ -40,14 +40,14 @@
     display: none;
 }
 
-.signup-form input {
+.signup-form input, select {
     width: 100%;
     padding: 0.75rem 1rem;
     border-radius: 0.5rem;
     outline: none;
     border: none;
 
-    font-size: 1.5rem;
+    font-size: 2.4vmin;
 }
 
 .btn-container {
@@ -60,11 +60,11 @@
 .auth {
     width: 30%;
     background-color: blue;
-    font-size: 1.5rem;
+    font-size: 2.7vmin;
 }
 
 .alt-link {
     width: max-content;
     text-align: right;
-    font-size: 1.5rem;
+    font-size: 2.5vmin;
 }

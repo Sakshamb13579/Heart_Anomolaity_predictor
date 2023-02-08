@@ -1,0 +1,79 @@
+.additional-form-wrapper {
+    width: 100%;
+    padding: 1rem 3rem;
+}
+
+.additional-form-container {
+    background-color: #eaeaea69;
+    border-radius: 0.5rem;
+    margin: 0 auto;
+    width: 90%;
+}
+
+.additional-form {
+    display: grid;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.input-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    gap: 1.5rem;
+}
+
+.form-input {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 0.5rem;
+    font-size: 3vmin;
+    font-family: 'Nunito', sans-serif;
+    width: 100%;
+    padding: 0 0.5rem;
+}
+
+.form-input input, select {
+    padding: 0.5rem 0.75rem;
+    font-size: 3vmin;
+    border-radius: 0.5rem;
+    border: none;
+    outline: none;
+    color: #757575;
+}
+
+.desc {
+    font-size: 2.4vmin;
+    font-family: 'Nunito', sans-serif;
+}
+
+.note {
+    display: block;
+    font-size: 2.4vmin;
+    font-family: 'Nunito', sans-serif;
+}
+
+.form-ptr {
+    display: block;
+    padding-left: 0.75rem;
+}
+
+.form-ptr li {
+    margin: 0;
+}
+
+.btn-container {
+    padding-left: 0.5rem;
+}
+
+.send {
+    font-size: 3vmin;
+    padding: 0.75rem 2rem;
+    background-color: #227fffed;
+    letter-spacing: 0.1rem;
+}
+
+#sugar_level, #hypert_treatment, #asprin_treatment, #treatment, #psychiatric_cond_name {
+    display: none;
+}
