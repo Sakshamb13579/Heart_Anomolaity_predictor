@@ -40,6 +40,16 @@
     margin-bottom: 1rem;
 }
 
+.highlight {
+    font-family: 'Pacifico', cursive;
+    font-size:6vmin;
+    text-align:center;
+}
+
+.desc {
+    font-size:4vmin;
+    text-align:left;
+}
 @media screen and (max-width: 768px) {
    .main-container {
         grid-template-columns: 1fr;
