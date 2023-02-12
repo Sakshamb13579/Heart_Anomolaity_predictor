@@ -2,13 +2,51 @@
 {% load static %}
 
 {% block title %}
-    About Us
+About Us
 {% endblock title %}
 
 {% block head %}
-    <link rel = 'stylesheet' type = 'text/css' href = "{% static 'css/about.css' %}">
+<link rel='stylesheet' type='text/css' href="{% static 'css/contact.css' %}">
 {% endblock head %}
 
 {% block body %}
-    <h1>Page Under Construction</h1>
+<div class="container">
+    <div class="row">
+        <h1>Contact us</h1>
+    </div>
+    <div class="row">
+        <h4 style="text-align:center">We'd love to hear from you!</h4>
+    </div>
+    <form class="row input-container">
+        {% csrf_token %}
+        <div class="col-xs-12">
+            <div class="styled-input wide">
+                <input type="text" name="name" required />
+                <label>Name</label>
+            </div>
+        </div>
+        <div class="col-md-6 col-sm-12">
+            <div class="styled-input">
+                <input type="text" name="email" required />
+                <label>Email</label>
+            </div>
+        </div>
+        <div class="col-md-6 col-sm-12">
+            <div class="styled-input" style="float:right;">
+                <input type="number" name="number" required />
+                <label>Phone Number</label>
+            </div>
+        </div>
+        <div class="col-xs-12">
+            <div class="styled-input wide">
+                <input type="text" name="message" required></input>
+                <label>Message</label>
+            </div>
+        </div>
+        <div class="col-xs-12">
+            <button type="submit" class="btn-lrg submit-btn">Send Message</div>
+        </div>
+    </form>
+</div>
+
 {% endblock body %}
