@@ -1,0 +1,33 @@
+.main-container {
+    display: flex;
+    font-size: 3vmin;
+    font-family: 'Open Sans', sans-serif;
+    padding-left: 5vw;
+}
+
+.page-title {
+    position: absolute;
+    font-size: 5vmin;
+    font-weight: 600;
+    left: 50%;
+    transform: translate(-50%, 50%);
+}
+
+.hero-content {
+    display: flex;
+    flex: 1;
+    align-items: center;
+}
+
+.image-container {
+    flex: 1.5;
+    width: 100%;
+    height: 100%;
+}
+
+.image-container img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}

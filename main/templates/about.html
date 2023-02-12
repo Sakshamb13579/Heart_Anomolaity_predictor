@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+    About Us
+{% endblock title %}
+
+{% block head %}
+    <link rel = 'stylesheet' type = 'text/css' href = "{% static 'css/about.css' %}">
+{% endblock head %}
+
+{% block body %}
+    <main class="main-container">
+        <div class="page-title">Who are WE ?</div>
+        <article class="hero-content">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit ratione velit aliquid vero asperiores incidunt optio corrupti eius dicta quos?
+        </article>
+        <div class="image-container">
+            <img src="{% static 'images/about_bg.png' %}">
+        </div>
+    </main>
+{% endblock body %}
