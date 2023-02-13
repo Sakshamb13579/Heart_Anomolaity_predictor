@@ -1,1 +1,45 @@
 {% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+    About Us
+{% endblock title %}
+
+{% block head %}
+    <link rel = 'stylesheet' type = 'text/css' href = "{% static 'css/dashboard.css' %}">
+{% endblock head %}
+
+{% block body %}
+    <article class="article-guidelines">
+        <br><h2>DIET To reduce ASCVD risk in all patients:</h2>
+        <br>
+            A diet emphasizing intake of vegetables, fruits, legumes, nuts, whole grains, and fish is recommended (I, B-R). A diet containing reduced amounts of cholesterol and sodium can be beneficial 
+        <br>
+            Replacement of saturated fat with dietary mono- and poly-unsaturated fats can be beneficial.
+        <br>
+            Minimizing the intake of trans fats, processed meats, refined carbohydrates, and sweetened beverages as part of a heart healthy diet reasonable.
+        <br>
+        <br>
+        <h2>For adults with type 2 diabetes mellitus:</h2>
+        <br>
+            A tailored nutrition plan focusing on a heart-healthy dietary pattern is recommended to improve glycemic control, achieve weight loss (if needed), and improve other ASCVD risk factors (I, A).
+        <br>
+        <br>
+            <h1>GENERAL Guidlince</h1>
+        <br>
+        <br>
+            <h2>To reduce ASCVD risk, adults should </h2>
+        <br>
+            Be routinely counseled to optimize a physically active lifestyle.
+        <br>
+            Engage in at least 150 minutes per week of accumulated moderate intensity or 75 minutes per week of vigorous intensity aerobic physical activity (or an equivalent combination of moderate and vigorous activity) (I, B-NR). This includes adults with type 2 diabetes mellitus (I, A).
+        <br>
+            Decrease sedentary behavior 
+        <br>
+        <br>
+        <h2>For adults unable to meet the minimum physical activity recommendations:</h2>
+        <br>
+        <br>
+            Engaging in some moderate or vigorous intensity physical activity, even if less than this recommended amount, can be beneficial to reduce ASCVD risk
+    </article>
+{% endblock body %}
